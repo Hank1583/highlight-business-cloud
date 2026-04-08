@@ -11,7 +11,7 @@ export default function ClientLayoutWrapper({
 }) {
   const pathname = usePathname();
 
-  const hideNavbar = pathname.startsWith("/dashboard");
+  const hideNavbar = pathname.startsWith("/products");
 
   return (
     <>

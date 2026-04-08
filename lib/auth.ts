@@ -14,11 +14,29 @@ export async function signToken(payload: Record<string, any>) {
 }
 
 // 驗證 JWT
-export async function verifyToken(token: string) {
+
+export async function verifyToken(
+  token: string
+): Promise<JWTPayload | null> {
   try {
     const { payload } = await jwtVerify(token, secret);
-    return payload;
+
+    return {
+      id: Number(payload.id),
+      email: String(payload.email),
+      name: payload.name ? String(payload.name) : undefined,
+      role: payload.role ? String(payload.role) : undefined,
+    };
   } catch {
     return null;
   }
 }
+
+// lib/types/auth.ts
+export interface JWTPayload {
+  id: number;
+  email: string;
+  name?: string;
+  role?: string;
+}
+

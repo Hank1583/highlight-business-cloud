@@ -92,8 +92,7 @@ export default function LoginPage() {
             </motion.p>
           )}
 
-          <button
-            disabled={isPending}
+          <button type="submit" disabled={isPending}
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2"
           >
             {isPending ? (
