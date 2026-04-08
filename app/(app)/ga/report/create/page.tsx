@@ -1,5 +1,6 @@
 "use client";
-
+import React from "react";
+export const runtime = 'edge';
 import { useState } from "react";
 import { useGAConnections } from "../../dataSource";
 import { useGaReportSave } from "../../dataSource";

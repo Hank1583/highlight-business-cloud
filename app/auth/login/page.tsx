@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+export const runtime = 'edge';
 import { Mail, Lock, Loader2 } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
