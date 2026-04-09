@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import { NextRequest, NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 
@@ -32,7 +30,7 @@ function getRequiredProduct(pathname: string) {
   return matched ? routePermissionMap[matched] : null;
 }
 
-export async function proxy(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   console.log("middleware pathname =", pathname);
 
