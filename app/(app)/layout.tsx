@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import AppHeader from "@/components/layout/AppHeader";
 import { cookies } from "next/headers";
 import { jwtVerify } from "jose";
