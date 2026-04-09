@@ -44,7 +44,6 @@ export async function phpListSeoSites(
     body: JSON.stringify({
       user_id: userId,
     }),
-    cache: "no-store",
   });
 
   const json = await parseJsonSafe<SeoListResponse>(res);
@@ -65,7 +64,6 @@ export async function phpAddSeoSite(
       "Content-Type": "application/json",
     },
     body: JSON.stringify(payload),
-    cache: "no-store",
   });
 
   const json = await parseJsonSafe<SeoAddResponse>(res);
@@ -90,7 +88,6 @@ export async function phpGetSeoSummary(
       user_id: userId,
       site_id: siteId,
     }),
-    cache: "no-store",
   });
 
   const json = await parseJsonSafe<SeoSummaryResponse>(res);

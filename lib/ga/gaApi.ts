@@ -6,7 +6,6 @@ export async function getGAConnections(memberId: number) {
     headers: {
       "X-Member-Id": String(memberId),
     },
-    cache: "no-store",
   });
   // console.log("res:"+memberId+":"+res);
 
@@ -44,7 +43,6 @@ export async function gaQuery(
       "X-Member-Id": String(memberId),
     },
     body: JSON.stringify(params),
-    cache: "no-store",
   });
 
   const text = await res.text();
@@ -71,7 +69,6 @@ export async function getGaReportList(userId: number) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ user_id: userId }),
-    cache: "no-store",
   });
 // console.log(`${BASE_URL}/api/ga/ga_report_list.php`);
   const json = await res.json();
@@ -93,7 +90,6 @@ export async function createGaReport(userId: number, payload: any) {
       user_id: userId,
       ...payload,
     }),
-    cache: "no-store",
   });
 
   const rawText = await res.text();
@@ -126,7 +122,6 @@ export async function getGaReportDetail(user_id: number,id: number){
       user_id,
       id,
     }),
-    cache: "no-store",
   });
 
   const result = await res.json();
@@ -153,7 +148,6 @@ export async function updateGaReport(
       id,
       ...payload,
     }),
-    cache: "no-store",
   });
 
   const result = await res.json();
