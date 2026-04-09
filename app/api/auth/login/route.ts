@@ -127,7 +127,7 @@ export async function POST(req: Request) {
     });
 
     res.cookies.set("token", token, {
-      httpOnly: false, // 為了只靠這 4 檔就能登出；之後可改回 true + 補 logout API
+      httpOnly: true, // 為了只靠這 4 檔就能登出；之後可改回 true + 補 logout API
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
