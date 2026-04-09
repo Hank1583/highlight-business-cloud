@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-export const runtime = 'edge';
 import { useState } from "react";
 
 export default function CrmPage() {

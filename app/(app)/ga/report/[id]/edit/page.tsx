@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-export const runtime = 'edge';
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useGAConnections } from "../../../dataSource";

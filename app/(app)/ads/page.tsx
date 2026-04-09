@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-export const runtime = 'edge';
 export default function AdsPage() {
   const platforms = [
     { name: "Facebook Ads", roas: 3.2, spend: "$12,400", ctr: "2.8%" },

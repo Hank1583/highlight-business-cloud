@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-export const runtime = 'edge';
 import { useMemo, useState, useEffect } from "react";
 import PageHeader from "@/components/ga/PageHeader";
 import KpiCard from "@/components/ga/KpiCard";
