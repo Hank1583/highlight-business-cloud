@@ -1,7 +1,7 @@
 import { SignJWT, jwtVerify } from "jose";
 
 const secret = new TextEncoder().encode(
-  process.env.JWT_SECRET || "dev-secret"
+  process.env.JWT_SECRET || "dev-secret-change-me"
 );
 
 // 建立 JWT
