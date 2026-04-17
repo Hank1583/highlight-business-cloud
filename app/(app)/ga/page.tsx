@@ -3,6 +3,7 @@ import { useMemo, useState, useEffect } from "react";
 import PageHeader from "@/components/ga/PageHeader";
 import KpiCard from "@/components/ga/KpiCard";
 import SectionCard from "@/components/ga/SectionCard";
+import { highlightPhpApiUrl } from "@/lib/config";
 import { useGAConnections, useGaData } from "../ga/dataSource";
 
 function getLastDays(days: number) {
@@ -50,7 +51,7 @@ export default function DashboardPage() {
   const [dateRange, setDateRange] = useState(getLastDays(30));
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
   const accountFetchLink = user?.id
-  ? `https://www.highlight.url.tw/business-cloud/ga/account_fetch.php?member_id=${user.id}`
+  ? highlightPhpApiUrl(`ga/account_fetch.php?member_id=${user.id}`)
   : null;
   const {
     gaConnections,

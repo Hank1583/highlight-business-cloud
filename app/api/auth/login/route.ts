@@ -18,13 +18,11 @@ type ProductKey =
   | "salesbot";
 
 const appIdMap: Record<string, ProductKey | undefined> = {
-  "business-cloud-dashboard": "dashboard",
-  "business-cloud-ga": "ga",
-  "business-cloud-seo": "seo",
-  "business-cloud-support": "support",
-  "business-cloud-crm": "crm",
-  "business-cloud-ads": "ads",
-  "business-cloud-salesbot": "salesbot",
+  "highlightsignal-dashboard": "dashboard",
+  "highlightsignal-ga": "ga",
+  "highlightsignal-seo": "seo",
+  "highlightsignal-ads": "ads",
+    "highlightsignal-support": "support"
 };
 
 async function signToken(payload: {

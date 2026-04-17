@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import PageHeader from "@/components/ga/PageHeader";
 import SectionCard from "@/components/ga/SectionCard";
+import { highlightPhpApiUrl } from "@/lib/config";
 import { useGAConnections } from "../dataSource";
 
 type User = {
@@ -38,7 +39,7 @@ export default function AccountPage() {
   }, []);
 
   const accountFetchLink = user?.id
-    ? `https://www.highlight.url.tw/business-cloud/ga/account_fetch.php?member_id=${user.id}`
+    ? highlightPhpApiUrl(`ga/account_fetch.php?member_id=${user.id}`)
     : null;
 
   return (

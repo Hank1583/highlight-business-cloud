@@ -1,4 +1,6 @@
-const BASE_URL = "https://www.highlight.url.tw/business-cloud/ga";
+import { highlightPhpApiUrl } from "@/lib/config";
+
+const BASE_URL = highlightPhpApiUrl("ga");
 
 /** GA Connections */
 export async function getGAConnections(memberId: number) {

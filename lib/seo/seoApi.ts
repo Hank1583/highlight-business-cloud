@@ -4,8 +4,9 @@ import type {
   SeoListResponse,
   SeoSummaryResponse,
 } from "@/lib/seo/types";
+import { highlightPhpApiUrl } from "@/lib/config";
 
-const PHP_API_BASE = "https://www.highlight.url.tw/business-cloud/seo";
+const PHP_API_BASE = highlightPhpApiUrl("seo");
 
 function getErrorMessage(json: any, fallback: string) {
   return json?.error?.message || json?.message || fallback;

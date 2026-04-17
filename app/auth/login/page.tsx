@@ -15,7 +15,7 @@ export default function LoginPage() {
       setError("");
 
       const formData = new FormData(e.currentTarget);
-      formData.append("app_id", "business-cloud");
+      formData.append("app_id", "highlightsignal");
 
       const payload = Object.fromEntries(formData.entries());
 
