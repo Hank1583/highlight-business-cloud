@@ -1,6 +1,8 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { jwtVerify } from "jose";
 
+export const runtime = "edge";
+
 const key = new TextEncoder().encode(
   process.env.JWT_SECRET || "dev-secret-change-me"
 );
